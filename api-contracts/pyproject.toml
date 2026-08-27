@@ -13,6 +13,11 @@ dependencies = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+markers = [
+    "external: tests that require access to an external service",
+    "smoke: minimal checks of critical API behavior",
+]
+strict_markers = true
 
 [tool.ruff]
 line-length = 100
